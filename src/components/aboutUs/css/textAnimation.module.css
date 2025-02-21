@@ -1,0 +1,127 @@
+.textAnimationHeading {
+  padding-top: 3rem;
+}
+
+.textAnimationHeading h3 {
+  font-family: Rajdhani;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 1);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.textAnimationHeading h2 {
+  font-family: Rajdhani-Regular;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 1rem;
+}
+
+.primer {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: -9rem; /* Removed negative margin */
+}
+
+.primer span {
+  font-size: 11rem;
+  font-family: Poppins;
+  display: inline-block;
+}
+
+/* Video Section */
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto; /* Removed fixed height */
+  margin-top: 2rem; /* Adjusted spacing */
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  max-height: 700px; /* Added max-height to prevent it from growing too large */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .textAnimationHeading h3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .textAnimationHeading h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .primer span {
+    font-size: 8rem;
+  }
+.primer {
+  margin-top: -7rem;
+}
+  .videoContainer {
+    margin-top: 1.5rem; /* Adjusted spacing */
+  }
+}
+
+@media (max-width: 768px) {
+  .textAnimationHeading {
+    padding-top: 2rem;
+  }
+
+  .textAnimationHeading h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .textAnimationHeading h2 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .primer span {
+    font-size: 6rem;
+  }
+.primer {
+  margin-top: -7rem;
+}
+  .videoContainer {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .textAnimationHeading {
+    padding-top: 1.5rem;
+  }
+
+  .textAnimationHeading h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .textAnimationHeading h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .primer span {
+    font-size: 4rem;
+  }
+.primer{
+  margin-top: -5rem;
+}
+  .videoContainer {
+    margin-top: 0.5rem;
+  }
+}

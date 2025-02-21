@@ -1,0 +1,67 @@
+.trustSecuritySection {
+  padding: 3rem 2rem 0rem 2rem; /* Adjusted for mobile */
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .trustSecuritySection {
+    padding: 5rem 7rem 0 5rem; /* Original padding for larger screens */
+  }
+}
+
+.label {
+  display: inline-flex;  /* Ensures it only takes the necessary width */
+  align-items: center;
+  gap: 4px;
+  border-radius: 100px;
+  border-width: 1px;
+  padding: 6px 16px;
+  background: rgba(0, 59, 71, 1);
+  border: 1px solid rgba(1, 69, 38, 1);
+  width: auto; /* Prevents full-width issue */
+  max-width: fit-content; /* Ensures it only takes necessary space */
+}
+
+
+.label h3 {
+  font-size: 12px;
+  font-family: Poppins;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+}
+.heading{
+  font-family: Rajdhani-Regular;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+}
+@media (min-width: 768px) {
+  .label h3 {
+    font-size: 14px;
+  }
+}
+
+.heading {
+  font-size: 28px;
+  /* text-align: center; */
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 48px;
+    text-align: left;
+  }
+}
+
+.videoContainer {
+  width: 100%;
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .videoContainer {
+    width: 100%;
+  }
+  .label{
+    display: inline-flex;
+  }
+}

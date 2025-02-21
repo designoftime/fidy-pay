@@ -1,0 +1,36 @@
+.primerContainer {
+    position: relative;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+    color: white;
+    text-align: center;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(270deg, #1a1a2e, #16213e, #0f3460);
+    background-size: 400% 400%;
+    z-index: -1;
+  }
+  
+  .header {
+    font-size: 4rem;
+    font-weight: bold;
+    padding: 100px 20px;
+    text-transform: uppercase;
+  }
+  
+  .section {
+    padding: 100px 20px;
+  }
+  
+  .heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  

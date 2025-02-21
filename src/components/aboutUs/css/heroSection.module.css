@@ -1,0 +1,105 @@
+/* Ensures the hero section takes full viewport height */
+.heroContainer {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 5vw;
+  /* text-align: center; */
+}
+
+/* Make SVGs responsive */
+.svg1 {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  border-radius: 100%;
+  top: 20%;
+  left: 10%;
+}
+.svg2 {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  border-radius: 100%;
+  bottom: 10%;
+  right: 10%;
+}
+/* Adjust text positioning */
+.textWrapper {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+.char{
+  display: inline-block;
+}
+
+/* Default text style */
+.text {
+  font-family: Rajdhani-Regular;
+  font-weight: 600;
+  font-size: 6vw; /* Responsive font size */
+  line-height: 1.2;
+  text-align: center;
+  color: rgba(48, 48, 48, 1);
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+
+/* Ensure second text is hidden initially */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Profile card positioning */
+.profileCardWrapper {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  /* transform: translateX(-50%); */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .heroContainer {
+    padding: 0 3vw;
+  }
+  .text {
+    font-size: 5vw;
+  }
+  .svg1, .svg2 {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 4vw;
+  }
+  .svg1, .svg2 {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 8vw;
+    display: inline-block;
+  }
+  .svg1, .svg2 {
+    max-width: 90%;
+  }
+  .svg1{
+    left: -20%;
+    top: 10%;
+  }
+  .svg2{
+    right: -20%;
+    bottom: 20%;
+  }
+}

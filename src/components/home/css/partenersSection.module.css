@@ -1,0 +1,23 @@
+.slick-slide {
+  margin: 0 10px; /* Adds spacing between slides */
+}
+
+.partnerCard {
+  border: 1px solid rgba(161, 174, 191, 1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.partnerCard:hover {
+  transform: scale(1.05);
+}
+
+.partenersSection_Heading {
+  font-family: Rajdhani-Bold;
+  font-size: 44px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.partnerSlider :global(.slick-slide) {
+  margin: 0 10px; /* Ensures spacing is applied correctly */
+}

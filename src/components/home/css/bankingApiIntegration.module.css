@@ -1,0 +1,103 @@
+.bankingApiIntegration_section {
+  padding: 5rem 9rem;
+}
+
+.main_Heading {
+  height: 186px;
+  opacity: 0.45;
+  color: transparent;
+  font-family: KumbhSans-Bold;
+  font-weight: 900;
+  font-size: 150px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  -webkit-text-stroke: 0.5px rgba(26, 54, 93, 1);
+  text-transform: uppercase;
+}
+
+.services_Progressbar {
+  width: 11px;
+  height: 664px;
+  border-radius: 20px;
+  background: rgba(217, 217, 217, 1);
+}
+
+/* Services Section */
+.servicesCard_section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Services Card */
+.servicesCard {
+  border: 1px solid rgba(229, 229, 229, 1);
+  width: 530px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 20px;
+  padding: 24px 20px;
+}
+.servicesCard:hover{
+  background: rgba(241, 255, 210, 1);
+  border: none;
+}
+
+.servicesCard h3 {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(1, 24, 33, 1);
+}
+
+.servicesCard p {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(107, 105, 105, 1);
+  opacity: 0.8;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .bankingApiIntegration_section {
+    /* padding: 1rem 2rem; */
+    /* padding-left: 0rem; */
+    padding: 3rem 2rem !important;
+  }
+
+  .main_Heading {
+    font-size: 17vw;
+    line-height: normal;
+    left: 0;
+  }
+
+  .servicesCard {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .bankingApiIntegration_section_cards {
+    flex-direction: column;
+    margin: 2rem auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .main_Heading {
+    top: 15;
+    font-size: 15vw;
+    line-height: normal;
+    left: 2rem;
+  }
+  .bankingApiIntegration_section {
+    /* padding: 1rem 2rem; */
+    /* padding-left: 0rem; */
+    padding: 6rem 2rem;
+  }
+}

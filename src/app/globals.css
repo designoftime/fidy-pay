@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  /* background: var(--background); */
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(246, 249, 248, 1);
+}
+@font-face {
+  font-family: "Rajdhani";
+  src: url("../assets/font/Rajdhani/Rajdhani-Light.ttf") format("woff2"),
+    url("../assets/font//Rajdhani/Rajdhani-Light.ttf") format("woff");
+
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rajdhani-Regular";
+  src: url("../assets/font/Rajdhani/Rajdhani-Regular.ttf") format("woff2"),
+    url("../assets/font/Rajdhani/Rajdhani-Regular.ttf") format("woff");
+
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rajdhani-Medium";
+  src: url("../assets/font/Rajdhani/Rajdhani-Medium.ttf") format("woff2"),
+    url("../assets/font//Rajdhani/Rajdhani-Medium.ttf") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rajdhani-Bold";
+  src: url("../assets/font/Rajdhani/Rajdhani-Bold.ttf") format("woff2"),
+    url("../assets/font/Rajdhani/Rajdhani-Bold.ttf") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Other font weights as needed */
+@font-face {
+  font-family: "Rajdhani-SemiBold";
+  src: url("../assets/font/Rajdhani/Rajdhani-SemiBold.ttf") format("woff2"),
+    url("../assets/font/Rajdhani/Rajdhani-SemiBold.ttf") format("woff");
+
+  font-style: normal;
+}
+@font-face {
+  font-family: "KumbhSans-Bold";
+  src: url("../assets/font/KumbhSans/KumbhSans-Bold.ttf") format("woff2"),
+    url("../assets/font/KumbhSans/KumbhSans-Bold.ttf") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jost";
+  src: url("../assets/font/Jost/Jost-Regular.ttf") format("woff2"),
+    url("../assets/font/Jost/Jost-Regular.ttf") format("woff");
+
+  font-style: normal;
+}
+html.lenis {
+  height: auto;
+}
+
+.lenis {
+  scroll-behavior: auto !important;
+}

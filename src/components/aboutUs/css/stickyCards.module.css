@@ -1,0 +1,111 @@
+.stickyCards_section {
+  background: rgba(2, 25, 46, 1);
+  padding: 2rem 0;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  gap: 24px;
+  margin: 50px auto;
+  /* height: 1800px; Enough height for scrolling effect */
+  align-items: center;
+}
+
+.title {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 42px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.08); /* Transparent effect */
+  min-height: 400px;
+  border-radius: 24px;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 400;
+  color: #cfcfcf;
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  text-align: center;
+}
+
+.card p {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Sticky positioning */
+.one { top: 10%; }
+.two { top: 15%; }
+.three { top: 20%; }
+.four { top: 25%; }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    /* height: 1500px; */
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .card {
+    min-height: 350px;
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .card p {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .one { top: 12%; }
+  .two { top: 18%; }
+  .three { top: 24%; }
+  .four { top: 30%; }
+}
+
+@media (max-width: 480px) {
+ 
+
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .card {
+    min-height: 300px;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .card p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .one { top: 8%; }
+  .two { top: 14%; }
+  .three { top: 20%; }
+  .four { top: 26%; }
+}

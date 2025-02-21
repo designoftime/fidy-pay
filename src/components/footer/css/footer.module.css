@@ -1,0 +1,129 @@
+.footer_section {
+  padding: 4rem 8rem;
+  margin: auto;
+}
+
+/* Navigation Links */
+.navItem {
+  font-family: Rajdhani, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(222, 222, 222, 1);
+}
+
+/* Bottom Text */
+.bootomText {
+  font-family: Rajdhani, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 2rem;
+}
+
+/* Main Heading */
+.main_Heading {
+  font-family: KumbhSans-Bold, sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  line-height: 1.2;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.33);
+  text-transform: uppercase;
+}
+
+/* Subheading */
+.services_subHeading {
+  font-family: Rajdhani, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+  margin-left: 0.5rem;
+}
+
+/* Input Fields */
+.inputField {
+  width: 100%;
+  max-width: 480px;
+  height: 50px;
+  padding: 0 1rem;
+  border-radius: 4px;
+  background: rgba(250, 250, 250, 1);
+  border: none;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1402px){
+  .main_Heading {
+    font-size: 4rem !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer_section {
+    padding: 3rem 4%;
+  }
+  
+  .main_Heading {
+    font-size: 3rem !important;
+  }
+
+  .services_subHeading {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer_section {
+    padding: 2rem 3%;
+  }
+
+  .navItem {
+    font-size: 0.9rem;
+  }
+
+  .main_Heading {
+    font-size: 3rem;
+    top: -10%;
+  }
+
+  .services_subHeading {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .inputField {
+    height: 45px;
+    font-size: 0.9rem;
+  }
+  .bootomText {
+   text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer_section {
+    padding: 1.5rem 2%;
+  }
+
+  .main_Heading {
+    font-size: 3rem;
+    top: -10%;
+  }
+
+  .services_subHeading {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  .inputField {
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .bootomText {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
