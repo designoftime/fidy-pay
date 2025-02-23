@@ -21,7 +21,7 @@ const QuotationSection = () => {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      // Image 1 Animation
+    
       gsap.fromTo(
         image1Ref.current,
         { opacity: 0, x: 100, rotate: 15 },
@@ -32,7 +32,7 @@ const QuotationSection = () => {
           duration: 1,
           scrollTrigger: {
             trigger: image1Ref.current,
-            start: "top 80%", // Trigger when it comes into view
+            start: "top 80%",
             end: "top 20%",
             scrub: true,
             toggleActions: "play reverse play reverse",

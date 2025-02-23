@@ -25,15 +25,15 @@ const AboutSection = () => {
             trigger: element,
             start: "top 80%",
             end: "top 30%",
-            scrub: true, // Ensures smooth entry and exit
-            toggleActions: "play reverse play reverse", // Play on enter, reverse on leave
+            scrub: true, 
+            toggleActions: "play reverse play reverse", 
           },
         }
       );
     };
 
-    animateSection(leftContentRef.current, -150); // Left content animation
-    animateSection(rightContentRef.current, 150); // Right content animation
+    animateSection(leftContentRef.current, -150); 
+    animateSection(rightContentRef.current, 150); 
   }, []);
 
   return (

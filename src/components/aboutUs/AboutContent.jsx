@@ -1,6 +1,5 @@
 import React from "react";
 import TestimonialSection from "./TestimonialSection";
-import styles from "./css/aboutContent.module.css";
 import ProfileCard from "./ProfileCard";
 const AboutContent = () => {
   return (

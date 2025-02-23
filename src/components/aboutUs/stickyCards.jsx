@@ -1,3 +1,4 @@
+"use client";
 import styles from "./css/stickyCards.module.css";
 
 const StickyCards = () => {

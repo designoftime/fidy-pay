@@ -1,5 +1,6 @@
 .bankingApiIntegration_section {
-  padding: 5rem 9rem;
+  padding: 5rem 7rem;
+  overflow-x: hidden !important;
 }
 
 .main_Heading {
@@ -14,31 +15,59 @@
   -webkit-text-stroke: 0.5px rgba(26, 54, 93, 1);
   text-transform: uppercase;
 }
-
+.right_svg {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  max-width: 150px;
+}
 .services_Progressbar {
+  margin-top: 40px;
   width: 11px;
-  height: 664px;
+  height: 740px;
   border-radius: 20px;
   background: rgba(217, 217, 217, 1);
+}
+.services_Progressbar {
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.progress_bar_segment {
+  border-radius: 20px;
+  width: 100%;
+ 
+  background-color: #ddd;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.progress_bar_segment.active {
+  height: 350px;
+  background: rgba(4, 104, 76, 1);
+ /* Green color on hover */
 }
 
 /* Services Section */
 .servicesCard_section {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 10px;
+  width: 100%;
 }
 
 /* Services Card */
 .servicesCard {
   border: 1px solid rgba(229, 229, 229, 1);
-  width: 530px;
-  height: 150px;
+  /* width: 530px; */
+  /* height: 150px; */
   display: flex;
   flex-direction: column;
   gap: 5px;
   border-radius: 20px;
-  padding: 24px 20px;
+  padding: 20px 20px;
 }
 .servicesCard:hover{
   background: rgba(241, 255, 210, 1);
@@ -81,6 +110,12 @@
     height: auto;
     padding: 20px;
   }
+  .services_Progressbar{
+    height: 700px !important;
+  }
+  .right_svg {
+    max-width: 120px;
+  }
 }
 @media (max-width: 1024px) {
   .bankingApiIntegration_section_cards {
@@ -100,4 +135,22 @@
     /* padding-left: 0rem; */
     padding: 6rem 2rem;
   }
+  .services_Progressbar{
+    height: 610px !important;
+  }
+}
+@media (max-width: 480px){
+  .services_Progressbar{
+    height:1100px !important;
+  }
+  .right_svg {
+    max-width: 100px;
+  }
+}
+.right_svg {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  max-width: 150px;
+  
 }

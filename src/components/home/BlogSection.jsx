@@ -10,6 +10,7 @@ import nextBtn from "@/assets/svgs/blogSection/nextIcon.svg";
 import Image from "next/image";
 import heroImg from "@/assets/home/heroImage.png";
 import Link from "next/link";
+
 const BlogSection = () => {
   const blogs = [
     {
@@ -32,10 +33,9 @@ const BlogSection = () => {
       link: "#",
     },
   ];
+
   return (
-    <section
-      className={`relative w-[full] h-screen bg-black flex items-center ${styles.blog_section}`}
-    >
+    <section className={`relative w-full min-h-screen bg-black flex items-center ${styles.blog_section}`}>
       {/* Background Image */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <Image
@@ -47,49 +47,47 @@ const BlogSection = () => {
           priority
         />
       </div>
-      {/* Content */}
-      <div className="relative z-10 py-16 px-6 md:px-24 mx-auto">
-        <div className={`mx-auto flex flex-col md:flex-row justify-center items-center gap-6 ${styles.blogSection_cards}`}>
-          {/* Left Content */}
 
+      {/* Content */}
+      <div className="relative z-10 py-16 px-6 md:px-24 mx-auto w-full">
+        <div className={`mx-auto flex flex-col md:flex-row justify-center items-center gap-6 ${styles.blogSection_cards}`}>
+          
+          {/* Left Content */}
           <div className={styles.blogLeft}>
-            <h2 className="">The Fidypay Blogs</h2>
+            <h2>The Fidypay Blogs</h2>
             <p className="text-gray-300 mb-6">
-              To help you get a detailed knowledge of our various service
-              solutions, here’s a range of blogs for you to understand their
-              benefits and usability. Apart from that, if you are a budding
-              FinTech start-up, then you will also be getting an understanding
-              of all of its industry aspects.
+              To help you get a detailed knowledge of our various service solutions, here’s a range of blogs for you to understand their benefits and usability. Apart from that, if you are a budding FinTech start-up, then you will also be getting an understanding of all of its industry aspects.
             </p>
-            <div>
-              <button className="bg-[#ff5c33] hover:bg-[#e14a2d] text-black py-2 px-6 rounded-full transition font-[Rajdhani-semibold]">
-                Read more
-              </button>
-            </div>
+            <div className="text-left">
+            <button className="bg-[#ff5c33] hover:bg-[#e14a2d] text-black py-2 px-6 rounded-full transition font-[Rajdhani-semibold]">
+              Read more
+            </button></div>
           </div>
 
+          {/* Swiper Section */}
           <div className={styles.blogRight}>
-            <button>
-              <Image src={prevBtn} alt="Previous" width={160} height={120} />
+            <button className={styles.navButton}>
+              <Image src={prevBtn} alt="Previous" width={150} height={150} />
             </button>
 
-            {/* Swiper Section */}
             <Swiper
-              modules={[Autoplay]}
+              modules={[Autoplay, Navigation]}
               autoplay={{ delay: 2000, disableOnInteraction: false }}
               spaceBetween={20}
-              slidesPerView={1}
+              slidesPerView={1} // Ensures only one slide per view
               loop={true}
+              navigation={{
+                nextEl: `.${styles.nextButton}`,
+                prevEl: `.${styles.prevButton}`,
+              }}
+              className="swiper-container mx-auto"
             >
               {blogs.map((blog, index) => (
-                <SwiperSlide key={index}>
-                  <div className={`${styles.blogCard} p-6 rounded-lg`}>
-                    <h3 className="text-lg font-bold mb-2">{blog.title}</h3>
-                    <p className="text-gray-300 text-sm">{blog.description}</p>
-                    <Link
-                      href={blog.link}
-                      className={styles.readMoreBtn}
-                    >
+                <SwiperSlide key={index} className="swiper-slide mx-auto">
+                  <div className={styles.blogCard}>
+                    <h3>{blog.title}</h3>
+                    <p>{blog.description}</p>
+                    <Link href={blog.link} className={styles.readMoreBtn}>
                       READ MORE
                     </Link>
                   </div>
@@ -97,8 +95,8 @@ const BlogSection = () => {
               ))}
             </Swiper>
 
-            <button>
-              <Image src={nextBtn} alt="Previous" width={160} height={120} />
+            <button className={styles.navButton}>
+              <Image src={nextBtn} alt="Next" width={150} height={150} />
             </button>
           </div>
         </div>

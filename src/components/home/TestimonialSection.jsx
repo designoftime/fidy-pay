@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./css/testimonialSection.module.css";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +13,10 @@ import client1Image from "@/assets/home/testimonialImages/client1.png";
 import client2Image from "@/assets/home/testimonialImages/client2.png";
 import client3Image from "@/assets/home/testimonialImages/client3.png";
 import feedBackImage from "@/assets/svgs/testimonialSection/feedback.svg";
-
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gradientCOlorImage from "@/assets/svgs/about_us/gradientColorImage.svg";
+gsap.registerPlugin(ScrollTrigger);
 const testimonials = [
   {
     id: 1,
@@ -42,12 +45,43 @@ const testimonials = [
 ];
 
 const TestimonialSection = () => {
+   const headingRef = useRef(null);
+    const textRef = useRef(null);
+    useEffect(() => {
+      const heading = headingRef.current;
+      const text = textRef.current;
+      gsap.from(heading, {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: heading,
+          start: "top 100%",
+          scrub: true,
+          toggleActions: "play reverse play reverse",
+        },
+      });
+  
+      gsap.from(text, {
+        y: -100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: text,
+          start: "top 85%",
+          scrub: true,
+          toggleActions: "play reverse play reverse",
+        },
+      }); }, []);
   return (
     <section className={`${styles.testimonial_section} relative`}>
-      <h2 className={`absolute top-[15%] left-10 ${styles.main_Heading}`}>
+      <Image src={gradientCOlorImage} alt="" className={styles.right_svg} />
+      <h2 ref={headingRef} className={`absolute top-[15%] left-10 ${styles.main_Heading}`}>
         TESTIMONIALS
       </h2>
-      <div className="relative z-10 max-w-5xl text-left pb-8">
+      <div ref={textRef} className="relative z-10 max-w-5xl text-left pb-8">
         <h3 className={styles.testimonial_subHeading}>
           Get to Know Our{" "}
           <span className="bg-gradient-to-br from-[#ef3b26] via-[#eb4624] to-[#f48752] text-transparent bg-clip-text">

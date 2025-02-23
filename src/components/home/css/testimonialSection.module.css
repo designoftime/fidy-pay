@@ -1,5 +1,6 @@
 .testimonial_section {
   padding: 9rem 7rem;
+  overflow-x: hidden;
 }
 .testimonial_heading {
   font-family: Jost;
@@ -31,7 +32,7 @@
 }
 .testimonial_cardSection {
   /* width: 1138; */
-  height: 341;
+  height: 400;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -39,9 +40,16 @@
   margin: auto;
   margin-top: 2rem;
 }
+.right_svg {
+  position: absolute;
+  top: 0;
+  right: -2%;
+  max-width: 150px;
+  /* height: 100%; */
+}
 .testimonial_card1 {
   width: 361;
-  height: 341;
+  /* height: 341; */
   gap: 10px;
   border-radius: 20px;
   padding: 36px 47px;
@@ -83,7 +91,7 @@
 }
 .testimonial_card2 {
   width: 361;
-  height: 341;
+  /* height: 341; */
   gap: 10px;
   border-radius: 20px;
   padding: 36px 47px;
@@ -125,7 +133,7 @@
 }
 .testimonial_card3 {
   width: 361;
-  height: 341;
+  /* height: 341; */
   gap: 10px;
   border-radius: 20px;
   padding: 36px 47px;
@@ -173,6 +181,9 @@
     left: 0 !important;
     top: 80px !important;
   }
+  .testimonial_section{
+    padding: 6rem 3rem;
+  }
 }
 @media (max-width: 1024px) {
   .main_Heading {
@@ -188,7 +199,7 @@
     line-height: normal;
     top: 70px !important;
   }
-  .testimonial_section {
+  /* .testimonial_section {
     padding: 6rem 4rem;
-  }
+  } */
 }

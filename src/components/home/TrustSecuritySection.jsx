@@ -1,4 +1,7 @@
-import React from "react";
+"use client"
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./css/trustSecuritySection.module.css";
 import heroImg from "@/assets/home/trustSecurityImages/backgroundImage.png";
 import Image from "next/image";
@@ -6,9 +9,36 @@ import trustworthyIcon from "@/assets/svgs/trustSecuritySection/trustworthyIcon.
 import youTubeVideoScreenShot from "@/assets/home/trustSecurityImages/image.png";
 import cornerImage from "@/assets/svgs/trustSecuritySection/square.svg";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const TrustSecuritySection = () => {
+  const sectionRef = useRef(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    
+    gsap.fromTo(
+      el,
+      { opacity: 0, filter: "blur(20px)", scale: 1.3 },
+      {
+        opacity: 1,
+        filter: "blur(0px)",
+        scale: 1,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 40%",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+    
+  }, []);
+
   return (
-    <section className={`${styles.trustSecuritySection} relative w-full bg-black mb-8`}>
+    <section ref={sectionRef} className={`${styles.trustSecuritySection} relative w-full bg-black mb-8`}>
       {/* Background Image */}
       <div className="absolute inset-0 w-full">
         <Image
@@ -39,8 +69,11 @@ const TrustSecuritySection = () => {
         </p>
       </div>
 
-      {/* Embedded YouTube Video */}
-      <div className={`relative z-10 ${styles.videoContainer} w-full max-w-[900px] mx-auto px-4 md:px-0`}>
+      {/* Embedded YouTube Video with GSAP Animation */}
+      <div
+        ref={videoRef}
+        className={`relative z-10 ${styles.videoContainer} w-full max-w-[900px] mx-auto px-4 md:px-0`}
+      >
         <Image src={youTubeVideoScreenShot} alt="Video Thumbnail" className="w-full h-auto" />
       </div>
     </section>

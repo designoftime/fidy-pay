@@ -1,5 +1,6 @@
 .about_section {
     padding: 10rem 7rem;
+    overflow: hidden;
   }
   
   /* Default: Row layout for large screens */

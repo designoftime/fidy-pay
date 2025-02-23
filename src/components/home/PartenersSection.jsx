@@ -24,11 +24,11 @@ const PartenersSection = () => {
 
   const settings = {
     infinite: true,
-    speed: 5000, // Slower and smooth movement
+    speed: 5000,
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0, // Ensures continuous movement
+    autoplaySpeed: 0,
     cssEase: "linear",
     pauseOnHover: false,
     arrows: false,
@@ -58,6 +58,7 @@ const PartenersSection = () => {
                 className="w-full h-20 bg-white p-2 rounded-md"
                 width={200}
                 height={20}
+                style={{objectFit: "contain"}}
               />
             </div>
           </div>

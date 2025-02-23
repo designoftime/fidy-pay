@@ -83,9 +83,9 @@ const DesktopHeader = ({ navLinks }) => {
       className="fixed top-0 w-full bg-white py-5 px-8 lg:px-20 z-50 shadow-md"
     >
       <div className="flex items-center justify-between">
-        <div ref={logoRef}>
+        <Link href="/" ref={logoRef}>
           <Image src={headerLogo} alt="Logo" width={120} height={70} />
-        </div>
+        </Link>
 
         <nav ref={navRef} className="hidden md:block">
           <ul className="flex items-center space-x-6 text-gray-800 text-lg">

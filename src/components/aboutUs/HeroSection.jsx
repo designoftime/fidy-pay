@@ -7,7 +7,6 @@ import styles from "./css/heroSection.module.css";
 import Image from "next/image";
 import backgroundImage1 from "@/assets/svgs/about_us/background1.svg";
 import backgroundImage2 from "@/assets/svgs/about_us/background2.svg";
-import ProfileCard from "./ProfileCard";
 
 gsap.registerPlugin(ScrollTrigger);
 

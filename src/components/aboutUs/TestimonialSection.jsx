@@ -19,8 +19,8 @@ const TestimonialSection = () => {
       const spans = textRef.current.querySelectorAll("span");
 
       gsap.to(spans, {
-        opacity: 1, // Darkens each word
-        stagger: 0.05, // Animate each word separately
+        opacity: 1,
+        stagger: 0.05,
         scrollTrigger: {
           trigger: textRef.current,
           start: "top 80%",

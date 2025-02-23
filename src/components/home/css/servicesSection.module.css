@@ -1,5 +1,6 @@
 .servicesSection {
-  padding: 5rem rem;
+  padding: 5rem 7rem;
+  /* overflow-x: hidden; */
 }
 .main_Heading {
   height: 186;
@@ -35,6 +36,7 @@
   width: 100%;
   max-width: 750px;
   /* margin: auto; */
+  /* overflow-x: hidden; */
 }
 
 /* Default card styling */
@@ -49,6 +51,7 @@
   border: 1px solid rgba(48, 48, 48, 1);
   transition: transform 0.3s ease-in-out;
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .servicesCard_title {
   font-family: Rajdhani-Regular;
@@ -113,10 +116,16 @@
 }
 /* Responsive Styling */
 @media (max-width: 768px) {
+  .servicesSection {
+    padding: 5rem 2rem;
+  }
   .main_Heading {
     font-size: 17vw;
     line-height: normal;
     left: 0 !important;
+  }
+  .services_content{
+    width: 100%;
   }
 }
 @media (max-width: 1024px) {
@@ -125,5 +134,77 @@
     font-size: 15vw;
     line-height: normal;
     left: 2rem !important;
+  }
+  .servicesSection {
+    padding: 5rem 2rem;
+  }
+}
+/* Responsive Styling for Devices less than 1024px */
+@media (max-width: 1024px) {
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+  }
+  .servicesSection {
+    padding: 5rem 2rem;
+    overflow-x: hidden;
+  }
+
+  /* Alternating card alignment */
+  .gridContainer .serviceCard:nth-child(odd) {
+    align-self: flex-start;
+    width: 90%;
+  }
+  .gridContainer .serviceCard:nth-child(even) {
+    align-self: flex-end;
+    width: 90%;
+  }
+
+  /* Ensure proper alignment and spacing */
+  .gridContainerLayout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .main_Heading {
+    top: -2%;
+    left: 0;
+  }
+}
+
+/* Responsive Styling for Devices less than 768px */
+@media (max-width: 768px) {
+  .gridContainer .serviceCard {
+    width: 100%;
+    align-self: center;
+  }
+  .servicesSection {
+    padding: 5rem 2rem;
+  }
+  .main_Heading {
+    font-size: 17vw;
+    line-height: normal;
+    left: 0 !important;
+  }
+}
+
+/* Responsive Styling for Devices less than 480px */
+@media (max-width: 480px) {
+  .servicesSection {
+    padding: 5rem 1rem;
+  }
+  .gridContainer .serviceCard {
+    /* flex-direction: column; */
+    text-align: center;
+    width: 100%;
+  }
+  .card1{
+    width: 100%;
+  }
+  .services_content{
+    width: 100%;
   }
 }

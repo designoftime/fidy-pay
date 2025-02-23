@@ -1,6 +1,7 @@
 .trustSecuritySection {
   padding: 3rem 2rem 0rem 2rem; /* Adjusted for mobile */
   height: auto;
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {

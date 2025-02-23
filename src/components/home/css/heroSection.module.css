@@ -18,6 +18,7 @@
 .heroSectionContent{
   padding-left: 3rem;
   padding-right: 3rem;
+  overflow-x: hidden;
 }
 .heroSection_work h3 {
   color: #fff;

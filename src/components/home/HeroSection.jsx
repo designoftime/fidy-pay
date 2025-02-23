@@ -10,11 +10,11 @@ const HeroSection = () => {
   const orangeSquareRef = useRef(null);
 
   useEffect(() => {
-    // GSAP animation - Fade in from bottom
+   
     gsap.fromTo(
       orangeSquareRef.current,
-      { opacity: 0, y: 50 }, // Start hidden and below the viewport
-      { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" } // Animate to visible
+      { opacity: 0, y: 50 }, 
+      { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" } 
     );
   }, []);
 
@@ -27,7 +27,7 @@ const HeroSection = () => {
 
   return (
     <div className={`relative w-full h-full bg-black flex items-center py-32 ${styles.heroSection}`}>
-      {/* Background Image */}
+     
       <div className="absolute z-0 w-full h-full">
         <Image
           src={heroImg}
@@ -39,12 +39,12 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Content */}
+   
       <div className={styles.heroSectionContent}>
         <HeroSectionContent />
       </div>
 
-      {/* Bottom Orange Square (Fade-in Effect) */}
+  
       <div ref={orangeSquareRef} className={styles.orangeSquare}>
         {data.map((item, index) => (
           <div key={index} className={styles.heroSection_work}>
