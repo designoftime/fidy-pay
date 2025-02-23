@@ -65,7 +65,7 @@
 }
 
 .whyUsCard1Content p {
-  max-width: 434px;
+  max-width: 434px !important;
   font-family: Poppins;
   font-weight: 400;
   font-size: clamp(14px, 2vw, 16px);
@@ -258,7 +258,7 @@ color: rgba(64, 63, 63, 1);
   .whyUsCard_section3_card2,
   .whyUsCard_section3_card3 {
     width: 100%;
-    max-width: 500px;
+    /* max-width: 500px; */
   }
 }
 

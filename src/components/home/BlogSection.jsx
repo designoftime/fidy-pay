@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./css/blogSection.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -33,7 +33,18 @@ const BlogSection = () => {
       link: "#",
     },
   ];
-
+  const swiperRef = useRef(null);
+  const prevButtonRef = useRef(null);
+  const nextButtonRef = useRef(null);
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      const swiperInstance = swiperRef.current.swiper;
+      if (prevButtonRef.current && nextButtonRef.current) {
+        prevButtonRef.current.addEventListener("click", () => swiperInstance.slidePrev());
+        nextButtonRef.current.addEventListener("click", () => swiperInstance.slideNext());
+      }
+    }
+  }, []);
   return (
     <section className={`relative w-full min-h-screen bg-black flex items-center ${styles.blog_section}`}>
       {/* Background Image */}
@@ -49,7 +60,7 @@ const BlogSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 py-16 px-6 md:px-24 mx-auto w-full">
+      <div className="relative z-10  mx-auto w-full">
         <div className={`mx-auto flex flex-col md:flex-row justify-center items-center gap-6 ${styles.blogSection_cards}`}>
           
           {/* Left Content */}
@@ -66,11 +77,12 @@ const BlogSection = () => {
 
           {/* Swiper Section */}
           <div className={styles.blogRight}>
-            <button className={styles.navButton}>
+            <button ref={prevButtonRef} className={styles.navButton}>
               <Image src={prevBtn} alt="Previous" width={150} height={150} />
             </button>
 
             <Swiper
+            ref={swiperRef}
               modules={[Autoplay, Navigation]}
               autoplay={{ delay: 2000, disableOnInteraction: false }}
               spaceBetween={20}
@@ -95,7 +107,7 @@ const BlogSection = () => {
               ))}
             </Swiper>
 
-            <button className={styles.navButton}>
+            <button ref={nextButtonRef} className={styles.navButton}>
               <Image src={nextBtn} alt="Next" width={150} height={150} />
             </button>
           </div>

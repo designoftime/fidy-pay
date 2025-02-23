@@ -2,6 +2,7 @@
   background: linear-gradient(0deg, #000000, #000000);
   /* margin: 0 auto; */
   overflow: hidden; /* Prevents unwanted horizontal scroll */
+  padding: 6rem 4rem;
 }
 
 /* Blog Left */
@@ -17,7 +18,7 @@
   font-weight: 900;
   font-size: 2rem;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 1);
 }
 .blogLeft p {
   font-family: "Rajdhani-Regular", sans-serif;
@@ -34,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   overflow: hidden; /* Fixes horizontal scrolling */
   position: relative;
   /* height: 600px; */
@@ -59,8 +60,8 @@
   border-radius: 10px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
-  width: 90%;
-  max-width: 100%;
+  width: 100%;
+  /* max-width: 100%; */
   /* text-align: center; */
   margin:  auto;
   height: 300px;
@@ -104,6 +105,9 @@
     width: 100px;
     height: 100px;
   }
+  .blog_section{
+    padding: 1.5rem 1rem;
+  }
 }
 @media (max-width: 1024) {
   .blogSection_cards {
@@ -114,7 +118,7 @@
   }
   .blogRight {
     width: 100%;
-    gap: 0.5rem;
+    gap: 0.5rem !important;
   }
   .swiper-container {
     width: 100%;
