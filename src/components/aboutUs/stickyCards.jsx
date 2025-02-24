@@ -3,10 +3,10 @@ import styles from "./css/stickyCards.module.css";
 
 const StickyCards = () => {
     const cards = [
-        { id: 1, text: "First punch line", className: styles.one },
-        { id: 2, text: "Second punch line", className: styles.two },
-        { id: 3, text: "Third punch line", className: styles.three },
-        { id: 4, text: "Fourth punch line", className: styles.four },
+        { id: 1, text: `"Simplifying Payments, Amplifying Business!"`, className: styles.one },
+        { id: 2, text: `"Seamless Transactions, Limitless Growth."`, className: styles.two },
+        { id: 3, text: `"FidyPay – Where Finance Meets Innovation!"`, className: styles.three },
+        { id: 4, text: `"Powering Digital Payments, Empowering You!"`, className: styles.four },
     ];
 
     return (
